@@ -1,0 +1,18 @@
+Calculations:
+Need to characterise thermistor approximately using beta-equation.
+
+1/T = 1/T0 + 1/beta ln(R/R0).
+At room temperature, 298 K, resistance is 8.5 kOhm.
+At body temperature of finger, 308 K, resistance is 6.5 kOhm.
+Solving for beta gives a value of approximately 2500 K^-1.
+
+
+3.3 V - R_fixed - thermistor - GND.
+3.3 = I(R_fixed + R_thermistor).
+I = 3.3 / (R_fixed + R_thermistor).
+so VOUT = I*R_thermistor = (3.3 * R_thermistor) / (R_fixed + R_thermistor).
+rearranging gives R_thermistor = (VOUT * R_fixed) / (3.3 - VOUT).
+
+
+Notes:
+Sampling time was chosen to be 1 second to reduce the noise, while also sufficiently capturing the changes caused my holding the thermistor in my hand.
