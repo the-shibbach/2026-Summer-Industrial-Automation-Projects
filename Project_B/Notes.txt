@@ -1,0 +1,13 @@
+To get it to work I had an issue with it. So it is supposed to be 5 V off and 0 V on. However, a pin cannot supply 5 V. Therefore, I used an NPN transistor so that IN could reach 5 V by the relay module. So a 1 kOhm resistor was attached from the pin to the base. The emitter was connected to GND. The collector was connected to IN. 
+
+How this transistor works is that when the pin is LOW, no current flows through the base. Therefore, the collector is open circuit, and IN has to read 5 V from its own rail. When the pin is HIGH, current flows through the base, and the collector is connected to the emitter which is GND. So IN is GND and the relay turns on (as low-lever trigger).
+
+The sawtooth oscillates because when light intensity is below the setpoint, the LED switches on. Almost immediately after, the light intensity is then above the setpoint. Hence, the LED will switch off. This causes a "sawtooth diagram". 
+
+Deadband of 50 was chosen to smooth out noise. 
+
+Interlock was added: if light intensity is less than 5 or more than 4090 (max is 4096) then we assume an error has occurred, and it immediately turns the LED OFF and stops taking measurements until it is safe to do so. 
+
+Filter: pv = 0.9 * pv + 0.1 * raw. Set pv to ambient conditions at the start. Then apply a filter so it moves slowly -> relay doesn't flicker so much (could damage the relay). 
+
+Also turned the LED into a practical lamp. It turns ON when it is dark outside, and it turns OFF when it is bright outside. Works in practise (see diagram).
