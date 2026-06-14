@@ -4,7 +4,7 @@ from pathlib import Path
 
 PORT = "COM10"
 BAUD = 115200
-OUTFILE = Path(r"C:\Documents\2026-Summer-Industrial-Automation-Projects\Project_B\data.csv")
+OUTFILE = Path(r"C:\Documents\2026-Summer-Industrial-Automation-Projects\Project_B\data2.csv")
 
 OUTFILE.parent.mkdir(parents=True, exist_ok=True)
 
@@ -13,7 +13,6 @@ try:
         time.sleep(2)              # wait for ESP32 reset after serial connection
         ser.reset_input_buffer()   # discard startup junk
 
-        print(f"Logging to {OUTFILE} - press Ctrl+C to stop")
 
         while True:
             line = ser.readline().decode("utf-8", errors="ignore").strip()
