@@ -1,0 +1,15 @@
+This was a good explanation I found on Reddit
+
+A bit is a single piece of memory inside the PLC. This memory can be either 1 or 0
+
+If you have a NO contact in ladder, it turns the line on when the bit is 1, and off when its 0
+
+If you have a NC contact in ladder, it turns the line off when the bit is 1, and om when its 0
+
+The bit used can be either from an input or other memory inside the PLC
+
+Lets imagine you have a START button and STOP button in the real world. The Start button has a NO contact, and the Stop a NC - The PLC doesn't really care what each button is using, it only cares about the input.
+
+You need to design your ladder program so it understands that
+
+https://www.reddit.com/r/PLC/comments/1mgi366/no_and_nc_in_ladder_logic_please_help/
