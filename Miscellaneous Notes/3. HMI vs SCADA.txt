@@ -1,0 +1,2 @@
+HMI is the interface for one machine/area.
+SCADA is the syste overeseeing many machines across a site.
