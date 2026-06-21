@@ -1,3 +1,5 @@
+This project is just a simple data logger. 
+
 Calculations:
 Need to characterise thermistor approximately using beta-equation.
 

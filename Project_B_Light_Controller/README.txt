@@ -1,3 +1,5 @@
+This project is a light controller. It generates a graph of intensity vs time. There is a sample interlock in it. A relay is also used (not necessary, but just experimenting with it :P).
+
 To get it to work I had an issue with it. So it is supposed to be 5 V off and 0 V on. However, a pin cannot supply 5 V. Therefore, I used an NPN transistor so that IN could reach 5 V by the relay module. So a 1 kOhm resistor was attached from the pin to the base. The emitter was connected to GND. The collector was connected to IN. 
 
 How this transistor works is that when the pin is LOW, no current flows through the base. Therefore, the collector is open circuit, and IN has to read 5 V from its own rail. When the pin is HIGH, current flows through the base, and the collector is connected to the emitter which is GND. So IN is GND and the relay turns on (as low-lever trigger).
