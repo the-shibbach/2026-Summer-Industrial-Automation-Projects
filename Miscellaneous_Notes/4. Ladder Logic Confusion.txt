@@ -13,3 +13,7 @@ Lets imagine you have a START button and STOP button in the real world. The Star
 You need to design your ladder program so it understands that
 
 https://www.reddit.com/r/PLC/comments/1mgi366/no_and_nc_in_ladder_logic_please_help/
+
+so when neither button pressed, start = 0, stop = 1. 
+when start is pressed, start = 1, stop = 1.
+when stop is pressed, start = 0, stop = 0.
