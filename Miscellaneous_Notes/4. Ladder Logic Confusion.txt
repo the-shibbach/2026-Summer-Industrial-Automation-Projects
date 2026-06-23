@@ -17,3 +17,7 @@ https://www.reddit.com/r/PLC/comments/1mgi366/no_and_nc_in_ladder_logic_please_h
 so when neither button pressed, start = 0, stop = 1. 
 when start is pressed, start = 1, stop = 1.
 when stop is pressed, start = 0, stop = 0.
+this mimics the real wiring!
+
+Input terminal has voltage -> bit = 1
+Input terminal has no voltage -> bit = 0
