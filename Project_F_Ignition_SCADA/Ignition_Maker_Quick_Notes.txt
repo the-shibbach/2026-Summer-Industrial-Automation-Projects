@@ -1,0 +1,67 @@
+Ignition Maker Edition – Quick Notes
+(disclaimer: my notes were messy so got chatgpt to clean it up)
+
+1. Install & Setup
+
+-   Install Ignition Maker Edition.
+-   Open the Gateway at: http://localhost:8088
+-   Launch the Designer and create a new Perspective project.
+
+2. Create Simulator Device
+
+Gateway: Connections → Devices → Connections → Create Device Connection
+
+Select: Programmable Device Simulator
+
+Create the device and ensure its status is Running.
+
+3. Import OPC Tags
+
+Designer: Tag Browser → Import Tags from Connected Devices
+
+Import a few simulator tags: - Sine0 - Ramp0 - RandomBoolean1 -
+WriteableBoolean1
+
+Create one Memory Tag: SP
+
+4. Database
+
+Gateway: Connections → Databases
+
+Create an SQLite database connection.
+
+5. Enable Tag History
+
+Right-click a tag: Edit Tag → History
+
+Set: - History Enabled = True - Storage Provider =
+Sample_SQLite_Database
+
+Wait a few minutes for history to accumulate.
+
+6. Build Perspective View
+
+Create a new View.
+
+Add: - Gauge - LED Display (or Indicator) - Numeric Entry Field - Time
+Series Chart
+
+7. Bind Components
+
+Gauge → Sine0
+
+Numeric Entry → SP
+
+LED/Indicator → WriteableBoolean1 or RandomBoolean1
+
+Time Series Chart: - Tag History binding - Historized tag (Sine0 or
+Ramp0)
+
+8. Launch
+
+Tools → Launch Perspective Session
+
+Verify: - Gauge updates live. - Numeric entry shows the setpoint. -
+Chart displays historical data.
+
+V8.3.7 of ignition btw.
