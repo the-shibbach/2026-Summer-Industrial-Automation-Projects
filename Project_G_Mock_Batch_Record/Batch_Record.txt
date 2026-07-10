@@ -1,0 +1,31 @@
+Header
+Recipe name: PID light batch
+Recipe version: 1.0
+Batch number: PG-2026-07-10-1.0 (for example ofc I just made this up :P)
+Equipment ID: ESP32 PID Light Rig
+Date: 10/07/2026
+Operator: Bryan Chan
+
+Parameters
+Target = 3500 
+Hold = 60 s
+
+Phase log
+Target = 3500 
+Start timestamp = 2.01 s -> PV = 3452
+Hold: PV remained approximately 3500
+End timestamp = 62.01 s 
+Pass
+BC
+
+In-process data
+See file Batch_Profile.jpg and data.csv
+Data.csv contains time, phase, SP, PV, and PID output
+
+Deviations
+None
+
+Review and sign-off
+Bryan Chan
+BC
+10/07/2026
