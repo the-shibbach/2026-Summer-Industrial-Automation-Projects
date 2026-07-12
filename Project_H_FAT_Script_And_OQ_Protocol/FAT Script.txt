@@ -1,0 +1,16 @@
+System name: PID Controller
+Version: v1.0
+Tester: Bryan Chan
+Date: 12/07/2026
+
+#  Test step                              Expected result                                       Actual                     P/F
+1  Power on; open Serial Monitor.         Header prints; PV reads a sane light value.           Same as expected           P	
+2  Press Start.                           PID drives LED; PV ramps toward setpoint.             Same as expected           P
+3  Let it settle.                         PV holds setpoint within tolerance; no oscillation.   Oscillation of \pm 2	   P
+4  Shade the LDR (disturbance).           Output rises; PV recovers to setpoint within a few s. Yes, within 5 s		   P
+5  Drive deviation past alarm limit.      Alarm/indicator activates.                            Yes, alarm activated 	   P
+6  Run a batch (Start recipe).            Phases RAMP → HOLD → RETURN log in order with         Same as expected	   P
+                                          timestamps.
+
+Sign off: BC
+Date: 12/07/2026
