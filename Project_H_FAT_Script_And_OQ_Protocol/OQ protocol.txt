@@ -1,0 +1,35 @@
+OQ protocol
+
+Purpose: To verify the PID light controller correctly operatres across its setpoint range, and that alarm and interlock functions perform as expected.
+
+Scope: Controller, alarm, interlock, batch sequency.
+
+References: FAT test script, Project_H.inu.
+
+Responsiblities: Bryan Chan executes. Someone else idk let's say Magnus Carlsen :P reviews and approves it.
+
+Prerequisites: IQ completed and passed.
+
+Test cases:
+
+Test ID: OQ-01.
+Objective: Verify SP is held within tolerance.
+Procedure: Set target (3500), let settle, and record steady. 
+Acceptance criteria: within the range of (3490, 3510).
+Actual result: after 30 seconds of settling, it was within the range (3498, 3502).
+Pass/Fail: Pass.
+Executed by/date: BC, 12/07/2026.
+
+Test ID: OQ-02.
+Objective: Verify interlock of extreme cases.
+Procedure: Set target to 0 and 4095 ADC counts (disconnecting LDR and shining phone camera). See if interlock works.
+Acceptance criteria: LED turns off and error message appears.
+Actual result: LED turned off and error message appeared.
+Pass/Fail: Pass.
+Executed by/date: BC, 12/07/2026.
+
+Deviations: None
+
+Conclusion and approval: Magnus Carlsen, 12/07/2026.
+
+Disclaimer: Magnus Carlsen did not review this, it was made up for the purposes of this educational lesson for me.
